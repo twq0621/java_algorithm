@@ -15,6 +15,11 @@ package sort;
  * ③. 递归地（recursively）把小于基准值元素的子数列和大于基准值元素的子数列排序。
  *
  * 递归到最底部时，数列的大小是零或一，也就是已经排序好了。这个算法一定会结束，因为在每次的迭代（iteration）中，它至少会把一个元素摆到它最后的位置去。
+ *
+ * 快速排序并不稳定，快速排序每次交换的元素都有可能不是相邻的, 因此它有可能打破原来值为相同的元素之间的顺序。
+ *
+ * 平均时间复杂度	  最好情况	最坏情况	空间复杂度
+ * O(nlogn)  	O(nlogn)	O(n 2 )	 O(1)
  */
 public class QuickSort {
     public static void quickSort(int[] arr,int low,int high){
